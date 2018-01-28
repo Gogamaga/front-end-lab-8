@@ -60,8 +60,8 @@ write your code here
         color: blue;
     }
 }
-}
 
+/* TASK 2 */
 .gallery-container li:nth-child(4),
 .gallery-container li:nth-child(5),
 .gallery-container li:nth-child(6){
@@ -73,11 +73,12 @@ write your code here
     border-left: 0 solid silver !important;
     border-right: 0 solid silver !important;
 }
+/* TASK 3 */
 p::first-letter{
     color: #76cdd7;
     font-size: 30px;
 }
-
+/* TASK 4 */
 .tm-main-content section:not(:nth-child(2)),
 .tm-main-content section>.tm-content-box,
 .tm-sidebar{
@@ -85,16 +86,16 @@ p::first-letter{
     -moz-box-shadow: 0px 0px 22px 0px rgba(83, 83, 83, 0.75);
     box-shadow: 0px 0px 22px 0px rgba(83, 83, 83, 0.75);
 }
-
+/* TASK 5 */
 .gallery-container a>img{
     border: 2px silver solid;
 }
-
+/* Task 6 */
 #ideas h2{
     color: gainsboro;
     letter-spacing: 5px;
 }
-
+/* TASK 7 */
 h2+p{
     font-style: italic;
 }
@@ -164,26 +165,4 @@ button[type="submit"]{
         margin-top: 120px;
     }
   }
-  /* @media screen and  (max-height: 835px) {
-    body{
-        padding-top: 0;
-    }
-    .tm-sidebar{
-        width: 100%;
-        z-index: 100;
-        top: 0;
-    }
-    .tm-sidebar ul{
-        display: flex;
-    }
-    .container{
-        padding: 0;
-        margin: 0;
-    }
-    .tm-sidebar ul>li{
-        border: none;
-    }
-    .tm-main-content{
-        margin-top: 120px;
-    }
-  } */
+ 
