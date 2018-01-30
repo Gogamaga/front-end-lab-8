@@ -1,0 +1,45 @@
+@import "variables2";
+@import "main";
+
+body {
+    background-color: $bodyBackground;
+}
+a {
+    color: $linkColor;
+}
+p {
+    color: $paragColor;
+}
+h1,
+h2 {
+    color: $headingColor;
+}
+#content {
+    background-color: $contentBackground;
+}
+img {
+    @include imgBorder($imgBorderColor);
+}
+.brief {
+    @include brief($briefBG, 30px,100%);
+}
+table tr {
+    &:first-child {
+        background-color: $theadBackground;
+    }
+    &:not(:first-child) {
+        background-color: $tbodyBackground;
+        color: $paragColor;
+    }
+    td {
+        @include tableBodyBorder($theadBackground);
+    }
+}
+form {
+    label {
+        color: $labelColor;
+    }
+    button {
+        @include button($buttonColor);
+    }
+}
