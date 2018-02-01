@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    /* max-width: 1600px; */
+    width: 100vw;
+    font-family: "Open Sans", sans-serif;
+    margin: 0 auto;
+}
+.header {
+    background: url("../img/apples.jpg");
+    background-size: cover;
+    background-position-x: center;
+    width: 100%;
+    height: 100vh;
+    padding: 0 12% 6%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+nav {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav__logo {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+}
+.nav__list-item {
+    padding: 10px 15px;
+}
+.nav__list-item:first-child {
+    border-bottom: 2px #b7c8d9 solid;
+}
+.logo {
+    font-size: 40px;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0 auto;
+    letter-spacing: 5px;
+    position: relative;
+}
+.logo::after {
+    content: "TM";
+    font-size: 14px;
+    top: 49%;
+    position: absolute;
+}
+.logo > span {
+    font-size: 2em;
+}
+.brand-discription {
+    font-weight: normal;
+    margin: 0 auto;
+    text-align: center;
+}
+button,
+.header__button {
+    padding: 20px 60px;
+    width: max-content;
+    border: 2px #ffffff solid;
+    background: rgba(52, 55, 57, 0.5);
+    color: #ffffff;
+    font-size: 14px;
+}
+.about {
+    width: 100%;
+    padding: 6% 12%;
+    display: flex;
+}
+.about > div {
+    width: 50%;
+}
+.about > div:first-child {
+    font-size: 18px;
+}
+.about > div:last-child {
+    font-size: 13px;
+}
+.gallery {
+    padding: 10% 12%;
+    background-color: #f3f3f3;
+}
+.heading {
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 7%;
+}
+.heading > span {
+    font-weight: bold;
+}
+.gallery__photo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 7%;
+}
+.gallery__photo-container {
+    position: relative;
+}
+.gallery__photo > div:nth-child(1n + 1) {
+    width: 35%;
+}
+.gallery__photo > div:nth-child(3n + 1) {
+    width: 60%;
+}
+.gallery__photo > div:nth-child(1),
+.gallery__photo > div:nth-child(2) {
+    margin-bottom: 5%;
+}
+
+.gallery__photo img {
+    width: 100%;
+    height: 100%;
+}
+.gallery__photo-like {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 10px 15px;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    background-color: rgba(52, 55, 57, 0.5);
+}
+.newsletter {
+    padding: 5% 5%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.newsletter .heading {
+    margin: 0;
+}
+.newsletter__form {
+    width: 60%;
+    display: flex;
+}
+.newsletter__button {
+    background-color: #343638;
+    border-color: #343638;
+    padding: 3% 9%;
+}
+.input-mail {
+    flex-grow: 2;
+
+    padding: 20px;
+    background-color: #f3f3f3;
+    border: none;
+    border-bottom: #343638 solid 1px;
+    float: left;
+}
+.input-mail::placeholder {
+    color: #000000;
+}
+.footer {
+    padding: 10% 12% 0;
+}
+.footer__grid {
+    display: flex;
+    padding-bottom: 10%;
+    border-bottom: 1px solid #b6b6b6;
+}
+.footer__grid-item {
+    width: 25%;
+    padding-right: 25px;
+}
+.footer__grid-item-heading {
+    margin-bottom: 10px;
+}
+.footer__grid-item-text {
+    color: #b6b6b6;
+}
+.footer-newsletter__form {
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+}
+.footer-newsletter__form .footer__input-mail {
+    width: 50%;
+    padding: 0 0 0 5px;
+}
+.footer-nav__logo {
+    color: #b6b6b6;
+}
