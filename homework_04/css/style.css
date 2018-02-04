@@ -156,6 +156,15 @@ button,
 .gallery__photo-like:hover span {
     color: red;
 }
+.gallery__photo-description {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #ffffff;
+}
+.gallery__photo-description span {
+    font-weight: bold;
+}
 .newsletter {
     padding: 5% 5%;
     background-color: #ffffff;
