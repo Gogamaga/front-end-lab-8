@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 .container {
@@ -36,7 +37,9 @@ nav {
     text-transform: uppercase;
     letter-spacing: 2px;
 }
-
+.header__nav a {
+    color: #ffffff;
+}
 .nav__list {
     list-style: none;
     display: flex;
@@ -44,7 +47,10 @@ nav {
 .nav__list-item {
     padding: 10px 15px;
 }
-.nav__list-item:first-child {
+.nav__list-item:hover {
+    border-bottom: 1px #b7c8d9 solid;
+}
+.header__nav .nav__list-item:first-child {
     border-bottom: 2px #b7c8d9 solid;
 }
 .logo {
@@ -77,6 +83,15 @@ button,
     background: rgba(52, 55, 57, 0.5);
     color: #ffffff;
     font-size: 14px;
+    outline: none;
+}
+.header__button:hover {
+    cursor: pointer;
+    background-color: #000000;
+    /* border-color: #000000; */
+}
+.header__button:active {
+    transform: scale(0.99, 0.99);
 }
 .about {
     width: 100%;
@@ -136,6 +151,10 @@ button,
     border: 2px solid #ffffff;
     color: #ffffff;
     background-color: rgba(52, 55, 57, 0.5);
+    cursor: pointer;
+}
+.gallery__photo-like:hover span {
+    color: red;
 }
 .newsletter {
     padding: 5% 5%;
@@ -155,6 +174,15 @@ button,
     background-color: #343638;
     border-color: #343638;
     padding: 3% 9%;
+    outline: none;
+}
+.newsletter__button:hover {
+    cursor: pointer;
+    background-color: #000000;
+    border-color: #000000;
+}
+.newsletter__button:active {
+    transform: scale(0.99, 0.99);
 }
 .input-mail {
     flex-grow: 2;
@@ -162,7 +190,7 @@ button,
     padding: 20px;
     background-color: #f3f3f3;
     border: none;
-    border-bottom: #343638 solid 1px;
+    border: #343638 solid 1px;
     float: left;
 }
 .input-mail::placeholder {
@@ -197,4 +225,7 @@ button,
 }
 .footer-nav__logo {
     color: #b6b6b6;
+}
+.footer__nav a {
+    color: #000000;
 }
