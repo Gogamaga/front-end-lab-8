@@ -12,8 +12,6 @@ if (!askToWantPlay) {
     while (askToWantPlay) {
         var random = getRandom(min, max * numberGame);
         var currentPrize = prize;
-
-        console.log(random, prize);
         for (var i = 1; i < attempt; i++) {
             var number = prompt(
                 `enter number from ${min} to ${max * numberGame}
@@ -21,15 +19,12 @@ if (!askToWantPlay) {
                 total prize ${totalPrize}
                 possible prize on current attempts ${currentPrize}`
             );
-
             if (random == number) {
                 numberGame += 1;
-                console.log(`numberGame ${numberGame}`);
                 totalPrize += currentPrize;
                 prize = prize * numberGame;
-                console.log(`prize ${prize}`);
                 console.log("Thank you for a game. Your prize is:" + totalPrize);
-                askToWantPlay = confirm("You win, want play again");
+                askToWantPlay = confirm(`You win, want play again you total prize ${totalPrize}`);
                 break;
             }
             currentPrize = Math.floor((currentPrize /= 2));
@@ -38,10 +33,10 @@ if (!askToWantPlay) {
                 numberGame = 1;
                 totalPrize = 0;
                 askToWantPlay = confirm("You lose, want play again");
+                console.log("You did not become a millionaire");
             }
         }
     }
-    console.log(`total ${totalPrize};`);
 }
 
 function getRandom(min, max) {
