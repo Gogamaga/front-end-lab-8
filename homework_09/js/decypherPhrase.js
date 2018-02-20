@@ -1,5 +1,5 @@
 function reverse(obj) {
-    var newObj = {};
+    const newObj = {};
     for (let key in obj) {
         newObj[obj[key]] = key;
     }
