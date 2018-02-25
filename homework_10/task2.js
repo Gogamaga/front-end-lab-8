@@ -39,7 +39,7 @@ function fighter({ name, attack, hp }) {
         wins: 0,
         loses: 0,
         getName() {
-            return name;
+            return this.name;
         },
         getStats() {
             return { name: this.name, attack: this.attack, hp: this.hp };
@@ -48,15 +48,16 @@ function fighter({ name, attack, hp }) {
             return { wins: this.wins, loses: this.loses };
         },
         block() {
-            return Math.random() > 0.5 ? true : false;
+            return Math.random() > 0.5;
         },
         fight(opponent) {
             if (opponent.block()) {
-                return;
+                return false;
             } else {
                 opponent.hp -= this.attack;
                 opponent.loses++;
                 this.wins++;
+                return true;
             }
         }
     };
@@ -70,30 +71,28 @@ function fighter({ name, attack, hp }) {
 
 var fighter1 = fighter({ name: "John", attack: 100, hp: 100 });
 var fighter2 = fighter({ name: "Kayn", attack: 50, hp: 300 });
-fighter1.fight(fighter2);
-console.log(fighter1.getStats(), fighter1.getCombatHistory());
-console.log(fighter2.getStats(), fighter2.getCombatHistory());
-// var fighter3 = fighter({name: 'Bill', attack: 40, hp: 100});
 
-// fighter1.fight(fighter2); // true, fighter 1 make damage to fighter 2
-// fighter1.fight(fighter3); // true, fighter 1 make damage to fighter 3
+var fighter3 = fighter({ name: "Bill", attack: 40, hp: 100 });
+
+fighter1.fight(fighter2); // true, fighter 1 make damage to fighter 2
+fighter1.fight(fighter3); // true, fighter 1 make damage to fighter 3
 
 // /**
 //  * Fighter John
 //  * - Combat stats: { wins: 1, loses: 0 }
 //  * - Properties: { name: 'John', attack: 100, hp: 100 }
 //  */
-// showResult(fighter1);
+showResult(fighter1);
 
 // /** Fighter Kayn
 //  * - Combat stats: { wins: 0, loses: 0 }
 //  * - Properties: { name: 'Kayn', attack: 50, hp: 200 }
 //  */
-// showResult(fighter2);
+showResult(fighter2);
 
 // /**
 //  * Fighter Bill
 //  * - Combat stats: { wins: 0, loses: 1 }
 //  * - Properties: { name: 'Bill', attack: 40, hp: 0 }
 //  */
-// showResult(fighter3);
+showResult(fighter3);
