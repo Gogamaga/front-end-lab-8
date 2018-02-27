@@ -1,0 +1,56 @@
+/* Your styles goes here */
+ul {
+    list-style: none;
+}
+
+#root > div > ul {
+    padding-left: 0;
+}
+.folder,
+.file {
+    margin: 0;
+}
+.folder.folder_close ~ ul {
+    display: none;
+}
+.folder.folder_open ul {
+    display: block;
+}
+.folder:hover,
+.file:hover {
+    background-color: rgba(204, 204, 204, 0.678);
+    cursor: pointer;
+}
+.folder.folder_close::before {
+    content: "";
+    background-image: url(./material-icons/ic_folder_black_24dp_1x.png);
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    background-size: 18px;
+    position: relative;
+    top: 5px;
+    margin-right: 2px;
+}
+.folder.folder_open::before {
+    content: "";
+    background-image: url(./material-icons/ic_folder_open_black_24dp_1x.png);
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    background-size: 18px;
+    position: relative;
+    top: 5px;
+    margin-right: 2px;
+}
+.file::before {
+    content: "";
+    background-image: url(./material-icons/ic_insert_drive_file_black_24dp_1x.png);
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    background-size: 18px;
+    position: relative;
+    top: 5px;
+    margin-right: 2px;
+}
