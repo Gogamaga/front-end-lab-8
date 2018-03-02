@@ -14,7 +14,11 @@ const createElement = (tag, attr, ...child) => {
 const root = document.querySelector("#root");
 
 const createTankItem = ({ preview, country_image, model, level, country }) => {
-    const tankImage = createElement("img", { class: "item__image", src: preview });
+    const tankImage = createElement("img", {
+        class: "item__image",
+        src: preview,
+        title: "Click to details"
+    });
     const countryImage = createElement("img", {
         class: "item__info-country-image",
         src: country_image,
