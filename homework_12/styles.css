@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #fff;
+    text-decoration: none;
 }
 
 #root {
@@ -11,6 +13,10 @@
 .tank-list__wrap {
     display: flex;
     flex-wrap: wrap;
+}
+.tank-list__wrap > h2 {
+    width: 100%;
+    padding: 20px 5px;
 }
 .item {
     width: 15%;
@@ -29,9 +35,57 @@
     justify-content: center;
 }
 .item__info-description {
-    color: #fff;
     text-transform: uppercase;
 }
 .item__info-country-image {
     height: fit-content;
+}
+
+/* Tank Details */
+.tank-details-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+.tank-details__preview {
+    width: 40%;
+}
+.tank-details__characteristic {
+    width: 60%;
+}
+.tank-details__heading {
+    width: 100%;
+    padding: 20px 5px;
+    display: flex;
+    align-items: center;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    display: flex;
+}
+.table th {
+    border: 1px solid #fff;
+}
+.table__tbody {
+    width: 30%;
+}
+.table__thead {
+    width: 60%;
+}
+.table__tbody-tr {
+    display: flex;
+    flex-direction: column;
+}
+.table__thead-tr {
+    display: flex;
+    flex-direction: column;
+}
+.table__thead-th {
+    padding: 10px;
+    text-align: left;
+}
+.table__tbody-th {
+    padding: 10px;
+    text-align: left;
 }
